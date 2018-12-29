@@ -19,10 +19,7 @@
     {
       "title": " 1.3 Interacteren met containers",
       "text": "1.3_opdracht.md",
-      "code": [
-        "pre-step.sh",
-        "clear-containers.sh"
-      ]
+      "code": "clear-containers.sh"
     },
     {
       "title": " 1.4 Container logs",
