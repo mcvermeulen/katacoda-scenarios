@@ -32,7 +32,7 @@
       "client": [
           {
             "file": "src/index.php", 
-            "target": "~/src"
+            "target": "~/tutorial/src"
           }
         ] 
       }
