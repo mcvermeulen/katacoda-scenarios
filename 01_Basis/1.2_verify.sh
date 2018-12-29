@@ -1,0 +1,1 @@
+(( $(docker ps -a | grep happy_new_year 2>/dev/null | wc -l) >= 1 )) && echo \"done\"

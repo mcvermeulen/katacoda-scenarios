@@ -1,0 +1,35 @@
+{
+  "title": "1. Containers starten en inspecteren",
+  "description": "",
+  "difficulty": "beginner",
+  "time": "10 minuten",
+  "authenticated": false,
+  "details": {
+    "steps": [{
+      "title": "1.1 Draaien van containers",
+      "text": "1.1_opdracht.md",
+      "verify": "1.1_verify.sh"
+    },
+    {
+      "title": " 1.2 Lijst van containers",
+      "text": "1.2_opdracht.md",
+      "verify": "1.2_verify.sh",
+      "code": "pre-step.sh"
+    }],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish":{
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mHier gebeurt het.\r\nVoer het `docker` command uit om de mogelijkheden te zien.\u001b[m\r\n",
+    "icon": "fa-docker"
+  },
+  "backend": {
+    "imageid": "docker"
+  }
+}
