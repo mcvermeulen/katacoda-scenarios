@@ -1,8 +1,8 @@
 {
-  "title": "6. Creëren van images met Dockerfiles (2/2)",
+  "title": "6. Creëren van images met Dockerfiles",
   "description": "",
   "difficulty": "beginner",
-  "time": "15 minuten",
+  "time": "10 minuten",
   "authenticated": false,
   "details": {
     "steps": [{
