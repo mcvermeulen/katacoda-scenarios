@@ -31,8 +31,8 @@
     "assets": { 
       "client": [
           {
-            "file": "src/index.php", 
-            "target": "~/tutorial/src"
+            "file": "index.html", 
+            "target": "~/"
           }
         ] 
       }
