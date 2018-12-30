@@ -1,0 +1,42 @@
+FROM php:7.3-apache 
+
+# Install required php module
+RUN apt update && \
+    apt install -qqy \
+    zlib1g-dev libicu-dev g++ zlib1g-dev libzip-dev git vim && \
+	# Delete all the apt list files since they're big and get stale quickly
+	rm -rf /var/lib/apt/lists/*
+    
+RUN docker-php-ext-install intl
+RUN docker-php-ext-install zip
+    
+# Enable mod rewrite
+RUN a2enmod rewrite 
+
+# clone git repo
+RUN cd /tmp && rm -rf /var/www/html && \
+	git clone https://github.com/cakephp/app.git /var/www/html
+	
+# Set workdir (no more cd from now)
+WORKDIR /var/www/html
+
+# Composer install application
+RUN curl https://raw.githubusercontent.com/composer/getcomposer.org/d3e09029468023aa4e9dcd165e9b6f43df0a9999/web/installer | php -- --quiet && \
+    php composer.phar -n install
+
+# Copy the app.php file
+RUN cp config/app.default.php config/app.php && \
+	# Inject some non random salt for this example 
+	sed -i -e "s/__SALT__/somerandomsalt/" config/app.php && \
+	# Make sessionhandler configurable via environment
+	sed -i -e "s/'php',/env('SESSION_DEFAULTS', 'php'),/" config/app.php  && \
+	# Set write permissions for webserver
+	chgrp -R www-data logs tmp && \
+	chmod -R g+rw logs tmp 
+
+####################################################
+# Expose port and run Apache webserver             #
+####################################################
+
+EXPOSE 80
+CMD ["/usr/sbin/apache2ctl", "-DFOREGROUND"]

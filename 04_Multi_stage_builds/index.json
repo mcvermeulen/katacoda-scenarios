@@ -6,18 +6,18 @@
   "authenticated": false,
   "details": {
     "steps": [{
-      "title": "3.1 De app",
-      "text": "3.1_opdracht.md",
+      "title": "4.1 De app",
+      "text": "4.1_opdracht.md",
       "courseData": "pre-configure.sh"
     },
     {
-      "title": "3.2 Single-stage",
-      "text": "3.2_opdracht.md",
+      "title": "4.2 Single-stage",
+      "text": "4.2_opdracht.md",
       "code": "pre-step.sh"
     },
     {
-      "title": "3.3 Multi-stage",
-      "text": "3.3_opdracht.md",
+      "title": "4.3 Multi-stage",
+      "text": "4.3_opdracht.md",
       "code": "pre-step.sh"
     }],
     "intro": {

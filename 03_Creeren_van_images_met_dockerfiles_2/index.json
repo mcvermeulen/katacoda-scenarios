@@ -1,0 +1,37 @@
+{
+  "title": "2. Creëren van images met Dockerfiles",
+  "description": "",
+  "difficulty": "beginner",
+  "time": "10 minuten",
+  "authenticated": false,
+  "details": {
+    "steps": [{
+      "title": "3.1 CakePHP met Composer",
+      "text": "3.1_opdracht.md",
+      "courseData": "pre-configure.sh",
+      "code": "pre-step.sh"
+    }],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish":{
+      "text": "finish.md"
+    }
+  },
+  "files": [
+    "Dockerfile"
+  ],
+  "environment": {
+    "uilayout": "editor-terminal",
+    "icon": "fa-docker",
+    "uisettings": "dockerfile",
+    "showdashboard": true,
+      "dashboards": [
+        {"name": "Apache webserver", "port": 1337}
+      ]
+    },
+  "backend": {
+    "imageid": "docker"
+  }
+}
